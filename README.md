@@ -61,3 +61,12 @@ npm run setup
 ```bash
 php artisan serve
 ```
+## *** Expected UI *** 
+
+### *** Github Assigned Issue List ***
+<img width="975" alt="Screenshot 2025-01-26 at 12 25 42 PM" src="https://github.com/user-attachments/assets/6a4fd25a-4d9d-4d4c-b7f6-e0157f96fb86" />
+
+### *** Assigned Issue Details ***
+<img width="948" alt="Screenshot 2025-01-26 at 12 25 51 PM" src="https://github.com/user-attachments/assets/73564ed3-3d61-42ee-875b-e5fdcea754ad" />
+
+
