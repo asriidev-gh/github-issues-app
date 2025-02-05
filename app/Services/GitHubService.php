@@ -25,7 +25,17 @@ class GitHubService
             'query' => ['filter' => 'assigned', 'state' => 'open'],
         ]);
 
-        return json_decode($response->getBody(), true);
+        $results = json_decode($response->getBody(), true);
+        
+        $newRes = array_filter($results, function ($item) {
+            if (!empty($item['labels'][0])) {
+                return $item['labels'][0]['name'] != 'wontfix' ? true : false;
+            } else {
+                return true;
+            }
+        });
+
+        return $newRes;
     }
 
     public function getIssueDetails($issueUrl)

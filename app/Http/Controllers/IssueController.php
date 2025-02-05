@@ -24,6 +24,10 @@ class IssueController extends Controller
         $issues = $this->gitHubService->getAssignedIssues();
         $issue = collect($issues)->firstWhere('id', $id);
 
+        if(empty($issue)) {
+            abort(404,"Id not found!");
+        }
+
         return view('issues.show', ['issue' => $issue]);
     }
 }
